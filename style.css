@@ -150,10 +150,6 @@ video{
     
 }
 .sec-cell{
-    animation-name: scroll;
-    animation-duration: 25s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     z-index: 10;
 }
 .sec_img, .sec_scroll{
@@ -162,10 +158,6 @@ video{
     
 }
 
-@keyframes scroll{
-    from{transform: translateX(0);}
-    to{transform: translateX(-2150px);}
-}
 .cell img, .sec-cell img{
     height: 200px;
     width: 200px;
