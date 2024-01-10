@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/sparxlogo(black).jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>Sparx_2024</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/cf3fb387331afda8f5d7f9c8dea3cd13?family=Jaturat" rel="stylesheet">
+    
+</head>
+
+<style>
+
+#hero_img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    filter: grayscale(1);
+}
+
+
+
+/* gallery style */
+
+#footer{
+    position: static;
+}
+
+#pag1{
+    width: 100%;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    text-align: center;
+}
+#pag1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Jaturat;
+}
+/* gallery hero*/
+#gall_hero{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: #ffffff35;
+}
+.phase{
+    display: flex;
+    justify-content: center;
+}
+.phase h4{
+    display: block;
+    width: 50%;
+}
+#high1, #high2{
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #CFFF04;
+}
+#gall_sub{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 30px;
+}
+.cell2, .cell1{
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff35;
+    padding: 10px 10px;
+    width: 200px;
+    border-radius: 3px;
+
+}
+.cell2 p, .cell1 p{
+    padding: 0px 10px;
+}
+.cell2 img, .cell1 img{
+    width: 70px;
+    height: 50px;
+    object-fit:cover;
+    border-radius: 3px;
+}
+/* gallery */
+#gallery, #gallery2 {
+   line-height:0;
+   -webkit-column-count:3; /* split it into 3 columns */
+   -webkit-column-gap:5px; /* give it a 5px gap between columns */
+   -moz-column-count:3;
+   -moz-column-gap:5px;
+   column-count:3;
+   column-gap:5px;
+}
+#gallery2{
+    left: -100%;
+    display: none;
+}
+
+#gallery img,#gallery2 img {
+   width: 100% !important;
+   height: auto !important;
+   margin-bottom:5px; /* to match column gap */
+}
+#gallery, #gallery2{
+    background-color: #ffffff35;
+    width: 70%;
+    position: relative;
+}
+@media (max-width: 1200px) {
+   #gallery, #gallery2 {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+   }
+}
+@media (max-width: 1000px) {
+   #gallery, #gallery2 {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+   }
+}
+@media (max-width: 800px) {
+   #gallery,#gallery2 {
+    -moz-column-count:    1;
+    -webkit-column-count: 1;
+    column-count:         1;
+   }
+}
+
+@media only screen and (max-width: 780px){
+    .cell2 img, .cell1 img{
+    display: none;
+    }
+    .cell2, .cell1{
+        padding: 1px 1px;
+        width: auto;
+        border-radius: 2px;
+    }
+    .cell2 p, .cell1 p{
+        padding: 0px 3px;
+    }
+}
+</style>
+
+<body>
+    <input type="checkbox" id="check" name="check">
+    <div id="nav">
+        <label for="check" class="checkbtn">
+            <img src="Images/menu.svg" alt="menu">
+        </label>
+        <img style="width: 60px;" src="Images/sparxlogo.png" alt="Sparx logo">
+        <h4><a href="index.html">HOME</a></h4>
+        <h4><a target="_blank" href="https://linktr.ee/sparx_2024">REGISTER</a></h4>
+        <h4><a href="Point.html">POINTS-TABLE</a></h4>
+        <h4><a href="Schedule.html">SCHEDULE</a></h4>
+        <h4><a href="Winners.html">WINNERS</a></h4>        
+        <h4><a href="Gallery.html">GALLERY</a></h4>
+    </div>
+    
+    <img id="hero_img" src="Images/galleryhero.jpg"  >
+    
+        <div id="pag1">
+            <br><br><br><br><br><br><br><br><br>
+            <h2 style="color:  #CFFF04;">SPARX 2023-24</h2>
+            <h3>Gallery</h3>
+            <br>
+            <div id="gall_hero">
+                <div class="phase">
+                    <div id="high1"></div>
+                    <div id="high2" ></div>
+                </div>
+                <div class="phase">
+                    <h4 onclick="highlight1()">PHASE 1</h4>
+                    <h4 onclick="highlight2()">PHASE 2</h4>
+                </div>
+                <div id="gall_sub">
+                    <!-- phase2 -->
+                    <div class="cell2">
+                        <img src="https://s3.envato.com/files/307854247/150618060.jpg"  >
+                        <p>OPEN FOOTBALL</p>
+                    </div>
+                    <div class="cell2">
+                        <img src="https://artintanzania.files.wordpress.com/2021/07/screen-shot-2021-07-26-at-3.57.18-pm-1.png"  >
+                        <p>RINK FOOTBALL</p>
+                    </div>
+                    <div class="cell2" >
+                        <img style="object-fit:fill;" src="https://www.trainheroic.com/wp-content/uploads/2022/09/AdobeStock_178117266-TH.jpg"  >
+                        <p>100 METER DASH</p>
+                    </div>
+                    <div class="cell2" >
+                        <img style="object-fit:fill;" src="https://static.wixstatic.com/media/650d4f_5770a5fbd1df4d109311ab2e5a17aa0b~mv2.jpg/v1/fill/w_968,h_681,al_c,q_85/650d4f_5770a5fbd1df4d109311ab2e5a17aa0b~mv2.jpg"  >
+                        <p>DISCUSS THROW</p>
+                    </div>
+                    <div class="cell2" >
+                        <img style="object-fit:fill;" src="https://coachingyoungathletes.files.wordpress.com/2019/09/find-the-faults-shot-put-resized.png?w=350&h=293"  >
+                        <p>SHOT PUT</p>
+                    </div>
+                    <div class="cell2" >
+                        <img style="object-fit:fill;" src="https://twg2022.com/wp-content/uploads/2018/09/Tug-of-War_Gallery_5.jpg"  >
+                        <p>TUG OF WAR</p>
+                    </div>
+                    <div class="cell2" >
+                        <img style="object-fit:fill;" src="https://img.etimg.com/thumb/msid-103670717,width-300,height-225,imgsize-424402,resizemode-75/image.jpg"  >
+                        <p>VOLLEYBALL</p>
+                    </div>
+                    <div class="cell2" >
+                        <img style="object-fit:fill;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Opening_rush.jpg/220px-Opening_rush.jpg"  >
+                        <p>DODGE BALL</p>
+                    </div>
+                    <div class="cell2" >
+                        <img style="object-fit:fill;" src="https://images.deccanherald.com/deccanherald/2023-10/01de8f30-9390-4b6c-b091-854324e7d974/iStock_1255328634.jpg?w=300&auto=format%2Ccompress&fit=max&enlarge=true"  >
+                        <p>CRICKET</p>
+                    </div>
+                    <div class="cell2">
+                        <img style="object-fit:fill;" src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-350190,resizemode-75,msid-70301440/news/sports/can-pro-kabaddi-league-with-season-7-starting-today-recapture-the-eyeballs.jpg"  >
+                        <p>KABADDI</p>
+                    </div>
+                    <!-- phase1 -->
+                    <div class="cell1">
+                        <img style="object-fit:fill;" src="https://playo.gumlet.io/FIKAARENA20220615091229254947/FikaArena1656614728326.jpeg"  >
+                        <p>BOX CRICKET</p>
+                    </div>
+                    <div class="cell1">
+                        <img style="object-fit:fill;" src="https://th.bing.com/th/id/OIP.NO-bokNGeyrWTuTrYraKiAHaE8?rs=1&pid=ImgDetMain"  >
+                        <p>BADMINTON</p>
+                    </div>
+                    <div class="cell1">
+                        <img style="object-fit:fill;" src="https://i.pinimg.com/originals/80/12/2f/80122f9a07ec9e84d058d86106ca4cf6.jpg"  >
+                        <p>CHESS</p>
+                    </div>
+                    <div class="cell1" >
+                        <img style="object-fit:fill;" src="https://imageio.forbes.com/specials-images/imageserve/62e93293440bb57f33b6862c/0x0.jpg"  >
+                        <p>TABLE TENNIS</p>
+                    </div>
+                    <div class="cell1">
+                        <img style="object-fit:fill;" src="https://th.bing.com/th/id/OIP.8nF7zzVGtI4StmXsllNhwgHaE7?rs=1&pid=ImgDetMain"  >
+                        <p>CARROM</p>
+                    </div>
+                    <div class="cell1">
+                        <img style="object-fit:fill;" src="https://t3.ftcdn.net/jpg/02/45/38/76/360_F_245387672_MmA9U8rahbAJF437miqsv98qeTPVvtA8.jpg"  >
+                        <p>ARM WRESTLING</p>
+                    </div>
+                    <div class="cell1">
+                        <img style="object-fit:fill;" src="https://media.istockphoto.com/id/474068730/photo/gym-is-a-way-of-life.webp?b=1&s=170667a&w=0&k=20&c=RO4bl9EuiYXY6jZGSHOH6Vbrk9RB8gSj8vdQ0_y5htA="  >
+                        <p>FITNESS CHALLENGE</p>
+                    </div>
+                    <div class="cell1">
+                        <img  src="Images/teachersports.jpg"  >
+                        <p>TEACHERS SPORTS</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Gallery -->
+
+            <div id="gallery">
+            </div> 
+            <div id="gallery2"> 
+            </div>  
+                 
+                
+            <br><br>
+        </div>
+        <div id="footer">
+            
+            <div class="foot_icons">
+                <a target="_blank" href="https://www.instagram.com/xie.sparx/"><img  src="Images/insta.svg" alt="insta"></a>
+                <a href=""><img  src="Images/book.svg" alt="book"></a>
+                <a target="_blank" href="https://linktr.ee/sparx_2024"><img  src="Images/linktree.svg" alt="linktree"></a>
+                <a href=""><img  src="Images/mail.svg" alt="Mail"></a>
+            </div>
+            <div class="footlink"> 
+                <h5 class="flink"><a href="index.html">HOME</a></h5>
+                <h5 class="flink"><a target="_blank" href="https://linktr.ee/sparx_2024">REGISTER</a></h5>
+                <h5 class="flink"><a href="Point.html">POINTS-TABLE</a></h5>    
+                <h5 class="flink"><a href="Schedule.html">SCHEDULE</a></h5>    
+                <h5 class="flink"><a href="Winners.html">WINNERS</a></h5>    
+                <h5 class="flink"><a href="Gallery.html">GALLERY</a></h5>    
+            </div>
+            <center><p>Developed by: Mervis Mascarenhas & Sam Saji</p></center>
+            <br>
+        </div>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script  src="script.js"></script> -->
+        
+    <script async="async" type="module">
+        
+         // Import the functions you need from the SDKs you need
+         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import{ getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+        apiKey: "AIzaSyBiKhLcYrB05FtpiYv0qqhMOV6UxcDiBCc",
+        authDomain: "sparx-2024.firebaseapp.com",
+        databaseURL: "https://sparx-2024-default-rtdb.firebaseio.com",
+        projectId: "sparx-2024",
+        storageBucket: "sparx-2024.appspot.com",
+        messagingSenderId: "156807045522",
+        appId: "1:156807045522:web:0eecdd6e21087ad411a14b",
+        measurementId: "G-PQP73KVBLK"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        //imit services
+        const db = getFirestore();
+        //collect ref
+        const colref = collection(db, 'Gallery');
+        //get collection data
+        getDocs(colref)
+            .then((snapshot)=>{
+                let gall = []
+                snapshot.docs.forEach((doc)=>{
+                    gall.push({...doc.data(), id: doc.id})
+                    
+                })
+
+                
+                console.log(gall)
+                var gal = document.getElementById("gallery");
+                var gal2 = document.getElementById("gallery2");
+                for (let i = 0; i < gall.length; i++){
+                    for( let j = 0; j<gall[i].link.length; j++)
+                    {
+                        var element = document.createElement("img");
+                        var down = document.createElement("a");
+                        down.href = gall[i].link[j];
+                        var sport = gall[i].id;
+                        element.classList.add(sport);
+                        element.src = gall[i].link[j];
+                        down.appendChild(element);
+                        if(gall[i].id == 'armwrestling' ||gall[i].id == 'badminton'||gall[i].id == 'bcricket'||gall[i].id == 'carrom'||gall[i].id == 'chess'||gall[i].id == 'fitness'||gall[i].id == 'teachers_sports' ||gall[i].id == 'table-tennis'){
+                            gal.appendChild(down);
+                        }
+                        else{
+                            gal2.appendChild(down);
+                        }
+                        
+                    }
+                }
+                
+            })
+            .catch(err =>{
+                console.log(err.message)
+            });
+            
+    
+            
+            gsap.to("#nav",{
+                backgroundColor:"#000",
+                duration:0.5,
+                height:"110px",
+                scrollTrigger:{
+                    trigeer:"#nav",
+                    scroller:"body",
+                    // markers:"true",
+                    start:"top -10%",
+                    end: "top -11%",
+                    scrub:1
+                }
+            })
+            
+    
+    </script>
+
+    <script>
+        var high1 =document.getElementById("high1");
+        var high2 =document.getElementById("high2");
+        var cell1 =document.getElementsByClassName('cell1');
+        var cell2 =document.getElementsByClassName('cell2');
+        var gallery =document.getElementById("gallery");
+        var gallery2 =document.getElementById("gallery2"); 
+
+        // hide high2 (phase 2) by default
+        high2.style.visibility = "hidden";
+        for (var i = 0; i < cell2.length; i++ ) {
+                cell2[i].style.display = "none";
+        }
+
+
+        function highlight1(){
+            high1.style.visibility = "visible";
+            high2.style.visibility = "hidden";
+            gallery2.style.left = "-100%"
+            gallery2.style.display = "none"
+            gallery.style.display = "block"
+            gallery.style.left= "0%";
+            for (var i = 0; i < cell1.length; i++ ) {
+                cell1[i].style.display = "block";
+            }
+            for (var i = 0; i < cell2.length; i++ ) {
+                cell2[i].style.display = "none";
+            }
+        }
+        
+        function highlight2(){
+            high2.style.visibility = "visible";
+            high1.style.visibility = "hidden";
+            gallery.style.left = "-100%";
+            gallery.style.display = "none"
+            gallery2.style.display = "block"
+            gallery2.style.left= "0%";
+            for (var i = 0; i < cell1.length; i++ ) {
+                cell1[i].style.display = "none";
+            }
+            for (var i = 0; i < cell2.length; i++ ) {
+                cell2[i].style.display = "block";
+            }
+        }
+
+        
+
+        
+    </script>
+</body>
+</html>
